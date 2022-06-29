@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">mymap(),forEach(),filter,reduce</h1>
+</body>
+</html>
+<script>
+//     package tool;
+// map function  ***************************
+
+
+let arr=new Array(2,3,4,5,6);
+let arr1=[2,3,4,5,6]
+let y=arr1.map(function (y){
+    // return y*2
+})
+console.log("map()",y);
+Array.prototype.myMap=function(func){
+    let arr=this;
+for(var i=0;i<arr.length;i++){
+    let element=arr[i];
+    let p=func(element);
+    console.log("my map():",p);
+
+// // // my map()*****
+
+}
+}
+
+Array.prototype.hello=function(y){
+    console.log("hi how are you")
+}
+   
+
+
+let p=arr1.myMap(function(p){
+    return p*2;
+});
+
+// // *********************
+const ratings = [5, 4, 5];
+let sum = 15;
+
+const sumFunction = async (a, b) => a + b;
+
+ratings.forEach(async (rating) => {
+  sum = await sumFunction(sum, rating);
+});
+
+console.log(sum);
+
+
+// // ************************
+const ages = [32, 33, 12, 40];
+
+function checkAge(age) {
+  return age > document.getElementById("ageToCheck").value;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.filter(checkAge);
+}
+console.log("filter()",ages)
+ 
+
+
+const array1 = [1, 2, 3, 4,5,6];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log("reudece",sumWithInitial);
+</script>
