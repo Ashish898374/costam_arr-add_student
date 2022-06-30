@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+  
+let persons = [
+    {
+        name: "masai",
+        number: "000-1111-1111",
+        location: "banglore"
+    },
+   
+];
+
+
+// Persons constructor
+
+Person = function(name, number,location) {
+    this.name = name;
+    this.number = number;
+    this.location=location;
+};
+
+
+// For each obj in array create a new constructor
+
+persons.forEach(item => {
+    if (item.location === "banglore") {
+        let person = item.name;
+        person = new Person(item.name, item.number);
+        console.log(persons);
+    }
+});
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const final = 0;
+const total = array1.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  final
+);
+
+console.log(total);
+
+const ages = [32, 33, 16, 40];
+const result = ages.filter(check);
+
+function check(age) {
+  return age >= 18;
+}
+console.log(ages)
+</script>
